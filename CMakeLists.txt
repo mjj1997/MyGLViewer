@@ -62,7 +62,7 @@ add_library(MyGLViewer::MyGLViewer_warnings ALIAS MyGLViewer_warnings)
 # add_subdirectory(configured_files)
 
 # Adding the src:
-# add_subdirectory(src)
+add_subdirectory(src)
 
 # Create unified web deployment directory (for WASM builds)
 # if(EMSCRIPTEN)

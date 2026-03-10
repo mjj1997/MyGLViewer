@@ -1,5 +1,7 @@
 qt_standard_project_setup()
 
+qt_add_resources(RESOURCES shader.qrc)
+
 qt_add_executable(
   GLViewer
   main.cpp
@@ -7,7 +9,8 @@ qt_add_executable(
   glwindow.h
   glwindow.ui
   glview.h
-  glview.cpp)
+  glview.cpp
+  ${RESOURCES}
 
 target_link_libraries(GLViewer PRIVATE Qt6::Widgets Qt6::OpenGLWidgets)
 

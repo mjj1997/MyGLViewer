@@ -11,6 +11,8 @@ qt_add_executable(
   glview.h
   glview.cpp
   ${RESOURCES}
+  model.cpp
+  model.h)
 
 target_link_libraries(GLViewer PRIVATE Qt6::Widgets Qt6::OpenGLWidgets)
 

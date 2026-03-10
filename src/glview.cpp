@@ -4,9 +4,17 @@ GLView::GLView(QWidget* parent)
     : QOpenGLWidget{ parent }
 {}
 
+GLView::~GLView()
+{
+    makeCurrent();
+    delete m_model;
+    doneCurrent();
+}
+
 void GLView::initializeGL()
 {
     initializeOpenGLFunctions();
+    m_model = new Model{ this };
 }
 
 void GLView::resizeGL(int w, int h) {}
